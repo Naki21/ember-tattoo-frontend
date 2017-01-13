@@ -13,6 +13,7 @@ export default Ember.Service.extend({
           email: credentials.email,
           password: credentials.password,
           password_confirmation: credentials.passwordConfirmation,
+          role: credentials.role,
         },
       },
     });
