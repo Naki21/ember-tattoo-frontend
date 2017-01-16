@@ -13,7 +13,10 @@ Router.map(function () {
   this.route('contests', function() {
     this.route('new');
   });
-  this.route('contest');
+  this.route('contest', { path: "contest/:contest_id" },function() {
+    this.route('edit');
+  });
+  // this.route('edit', { path: "contest/edit/:contest_id" });
 });
 
 export default Router;

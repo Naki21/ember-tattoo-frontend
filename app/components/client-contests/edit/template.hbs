@@ -1,0 +1,22 @@
+<form {{action 'save' on='submit'}}>
+  <div class="form-group">
+    <label for="newContestInput">Title</label> {{input type="text" class="form-control" id="newContestName" placeholder='Contest Title' value=contest.name}}
+  </div>
+  <div class="form-group">
+    <label for="newContestInput">Prize</label>
+    <div class="input-group">
+      <div class="input-group-addon">$</div>
+      {{input type="integer" class="form-control" id="newContestPrize" placeholder='How much will this contest be for?' value=contest.prize}}
+      <div class="input-group-addon">.00</div>
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="newContestInput">End Date</label> {{input type="date" class="form-control" id="newContestEndDate" value=contest.end_date}}
+  </div>
+  <div class="form-group">
+    <label for="newContestInput">Description</label> {{textarea type="text" class="form-control" id="newContestDescription" placeholder='Please write a little about what you are looking for in your tattoo' value=contest.description}}
+  </div>
+
+  <button class='btn btn-success' type="submit" name="button">Create</button>
+  <button class='btn btn-danger' name="button" {{action 'cancel'}}>Cancel</button>
+</form>

@@ -1,4 +1,13 @@
-<h1>{{contest.name}}</h1>
-<p>{{contest.price}}</p>
-<p>{{contest.date}}</p>
-<p>{{contest.description}}</p>
+  <div class="media-left">
+    <a href="{{contest.id}}">
+      <img class="media-object" src="http://placehold.it/64x64" alt="...">
+    </a>
+  </div>
+  <div class="media-body">
+    <h4 class="media-heading">{{contest.name}}</h4>
+  <p>{{contest.prize}}</p>
+    <p>{{contest.end_date}}</p>
+  </div>
+  <div class="madia-right">
+    <button class="btn btn-warning btn-xs"type="button" name="editButton" {{action 'edit'}}>Edit</button>
+  </div>
