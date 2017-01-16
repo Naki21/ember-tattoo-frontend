@@ -1,0 +1,4 @@
+FATAL:  lock file "postmaster.pid" already exists
+HINT:  Is another postmaster (PID 27609) running in data directory "/home/naki/.linuxbrew/var/postgres"?
+FATAL:  lock file "postmaster.pid" already exists
+HINT:  Is another postmaster (PID 27609) running in data directory "/home/naki/.linuxbrew/var/postgres"?
