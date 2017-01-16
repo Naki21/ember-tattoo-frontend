@@ -6,11 +6,8 @@ export default Ember.Route.extend({
   return this.get('store').findRecord('contest', contest.contest_id);
 },
 actions: {
-  editContest(contest){
-    console.log('here');
-    console.log(this.get('contest'));
-    console.log(this.get('contest.prize'));
-    console.log('here');
+  editContest(){
+    console.log('In Contest Route');
     this.transitionTo('contest.edit');
   }
 }
