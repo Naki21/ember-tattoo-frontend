@@ -15,6 +15,8 @@ Router.map(function () {
   });
   this.route('contest', { path: "contest/:contest_id" },function() {
     this.route('edit');
+    this.route('submission');
+    this.route('submissions');
   });
   // this.route('edit', { path: "contest/edit/:contest_id" });
 });

@@ -1,1 +1,7 @@
+{{outlet}}
 {{client-contests/info contest=model editContest='editContest'}}
+<row>
+{{#each model.submissions as |submission|}}
+  {{client-contests/submission submission=submission}}
+{{/each}}
+</row>

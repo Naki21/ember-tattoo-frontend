@@ -1,9 +1,8 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
-  model(contest) {
-  console.log(contest);
-  return this.get('store').findRecord('contest', contest.contest_id);
+  model(params) {
+  return this.get('store').findRecord('contest', params.contest_id);
 },
 actions: {
   editContest(){

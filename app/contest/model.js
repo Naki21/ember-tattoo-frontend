@@ -5,5 +5,6 @@ export default DS.Model.extend({
   prize: DS.attr('number'),
   end_date: DS.attr('string'),
   description: DS.attr('string'),
-  // user: DS.belongsTo('user')
+  submissions: DS.hasMany('submission', {async: true}),
+  user: DS.belongsTo('user')
 });
