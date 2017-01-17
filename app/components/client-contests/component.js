@@ -2,11 +2,9 @@ import Ember from 'ember';
 
 export default Ember.Component.extend({
 actions: {
-  actions: {
-    edit(contest){
+    edit(){
       console.log('in the client contests');
-      this.sendAction('edit', contest);
-    }
+      this.sendAction('editContest', this.get('contest'));
   }
 }
 });
