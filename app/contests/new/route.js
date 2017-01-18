@@ -5,7 +5,16 @@ export default Ember.Route.extend({
   model() {
     return this.get('store').createRecord('contest');
   },
-  actions: {
+    actions: {
+      willTransition () {
+      let store = this.get('store');
+      store.peekAll('contest').forEach(function (contest) {
+        if (contest.get('isNew') && contest.get('hasDirtyAttributes')) {
+          contest.rollbackAttributes();
+        }
+      });
+      return true;
+    },
     newContest(contest) {
       contest.save();
       console.log(contest);
