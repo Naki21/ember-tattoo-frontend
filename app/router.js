@@ -15,13 +15,13 @@ Router.map(function () {
   });
   this.route('contest', { path: "contest/:contest_id" },function() {
     this.route('edit');
-    this.route('submission', function() {
-      this.route('new');
-    }
-  );
-    this.route('submissions');
+    // this.route('submission', function() {
+    //   this.route('new');
+    // this.route('submissions');
+    // }
+  // );
   });
-  // this.route('contest.submission.new', { path: "contest/:contest_id/submission/new" });
+  this.route('contest.submission', { path: "contest/:contest_id/submission" });
 });
 
 export default Router;

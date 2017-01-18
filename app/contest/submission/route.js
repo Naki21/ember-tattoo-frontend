@@ -1,8 +1,12 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
-    model(params){
-      console.log(params);
-    // return this.get('store').findRecord('submission', params.submission_id);
+  model(params) {
+    return this.get('store').findRecord('contest', params.contest_id);
+  },
+  actions: {
+    saveSubmission(submission) {
+      this.get('store').createRecord('submission', submission).save();
+    }
   }
 });

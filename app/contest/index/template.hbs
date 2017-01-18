@@ -1,7 +1,12 @@
 {{outlet}}
 {{client-contests/info contest=model editContest='editContest'}}
+{{#link-to 'contest.submission' model}}New Submission{{/link-to}}
+{{!-- {{client-contests/submission/new submission=model.submissions save='saveSubmission' cancel='cancelSubmission'}} --}}
+
+<div class="container">
 <row>
 {{#each model.submissions as |submission|}}
   {{client-contests/submission submission=submission}}
 {{/each}}
 </row>
+</div>
