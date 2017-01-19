@@ -5,7 +5,6 @@
     <div class="collapse navbar-collapse" id="navigation">
       <ul class="nav navbar-nav">
         {{#if isAuthenticated}}
-        <li>{{#link-to "users"}}Users{{/link-to}}</li>
         <li>{{#link-to "contests"}}My Contests{{/link-to}}</li>
         {{!-- <li>{{#link-to "profile"}}My Profile{{/link-to}}</li> --}}
         {{/if}}
@@ -23,12 +22,12 @@
   </div>
 </nav>
 
-<h1>Welcome to Ember!</h1>
+<h1>Welcome to Group th<strong>INK</strong>!</h1>
 
 {{#each flashMessages.queue as |flash|}}
   {{flash-message flash=flash}}
 {{/each}}
-
+<p>Croud sourced tattoo design.</p>
 <div class="col-md-8 col-md-offset-2">
   {{outlet}}
 </div>
