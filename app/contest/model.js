@@ -6,5 +6,6 @@ export default DS.Model.extend({
   end_date: DS.attr('string'),
   description: DS.attr('string'),
   submissions: DS.hasMany('submission', {async: true}),
+  // editable: DS.attr('boolean'),
   user: DS.belongsTo('user')
 });

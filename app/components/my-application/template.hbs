@@ -5,7 +5,11 @@
     <div class="collapse navbar-collapse" id="navigation">
       <ul class="nav navbar-nav">
         {{#if isAuthenticated}}
+        {{#if isArtist}}
+        <li>{{#link-to "contests"}}All Contests{{/link-to}}</li>
+        {{else}}
         <li>{{#link-to "contests"}}My Contests{{/link-to}}</li>
+        {{/if}}
         {{!-- <li>{{#link-to "profile"}}My Profile{{/link-to}}</li> --}}
         {{/if}}
       </ul>
