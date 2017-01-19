@@ -33,7 +33,7 @@ module.exports = function (environment) {
     let port = +('GA'.split('').reduce((p, c) =>
       p + c.charCodeAt().toString(16), '')
     );
-    ENV.apiHost = `http://localhost:${port}`;
+    ENV.apiHost = 'https://thawing-garden-15274.herokuapp.com/';
   }
 
   if (environment === 'test') {
@@ -50,6 +50,7 @@ module.exports = function (environment) {
 
   if (environment === 'production') {
     ENV.locationType = 'hash';
+    ENV.rootUrl = '/ember-tattoo-frontend';
   }
 
   return ENV;
