@@ -1,7 +1,8 @@
 {{outlet}}
 {{client-contests/info contest=model editContest='editContest'}}
+{{#if isArtist}}
 {{#link-to 'contest.submission' model}}New Submission{{/link-to}}
-{{!-- {{client-contests/submission/new submission=model.submissions save='saveSubmission' cancel='cancelSubmission'}} --}}
+{{/if}}
 
 <div class="container">
 <row>

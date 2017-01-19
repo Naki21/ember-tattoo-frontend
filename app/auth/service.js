@@ -5,7 +5,13 @@ export default Ember.Service.extend({
   ajax: Ember.inject.service(),
   credentials: storageFor('auth'),
   isAuthenticated: Ember.computed.bool('credentials.token'),
-  isArtist: Ember.computed.bool('credentials.role'),
+  isArtist: Ember.computed.equal('credentials.role', function(){
+    if("artist"){
+      return true;
+    } else {
+      return false;
+    }
+  }),
 
   signUp (credentials) {
     return this.get('ajax').post('/sign-up', {
