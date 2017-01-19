@@ -2,7 +2,7 @@
 
 module.exports = function (environment) {
   'use strict';
-  var ENV = {
+  const ENV = {
     modulePrefix: 'ember-tattoo-frontend',
     environment: environment,
     rootURL: '/',
@@ -33,7 +33,7 @@ module.exports = function (environment) {
     let port = +('GA'.split('').reduce((p, c) =>
       p + c.charCodeAt().toString(16), '')
     );
-    ENV.apiHost = 'https://thawing-garden-15274.herokuapp.com/';
+    ENV.apiHost = `http://localhost:${port}`;
   }
 
   if (environment === 'test') {
@@ -49,9 +49,9 @@ module.exports = function (environment) {
   }
 
   if (environment === 'production') {
+    ENV.rootURL = '/ember-tattoo-frontend';
     ENV.locationType = 'hash';
-    ENV.rootURL = 'ember-tattoo-frontend';
-    ENV.apiHost = `https://thawing-garden-15274.herokuapp.com/`;
+    ENV.apiHost = 'https://thawing-garden-15274.herokuapp.com';
   }
 
   return ENV;
