@@ -2,7 +2,7 @@
 
 module.exports = function (environment) {
   'use strict';
-  const ENV = {
+  var ENV = {
     modulePrefix: 'ember-tattoo-frontend',
     environment: environment,
     rootURL: '/',
