@@ -7,4 +7,6 @@ export default DS.Model.extend({
   rating: DS.attr('number'),
   contest: DS.belongsTo('contest'),
   submission: DS.belongsTo('submission'),
+  editable: DS.attr('boolean'),
+
 });

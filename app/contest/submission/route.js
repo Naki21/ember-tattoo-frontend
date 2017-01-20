@@ -15,7 +15,7 @@ export default Ember.Route.extend({
         return;
       }
       this.get('store').createRecord('submission', submission).save();
-      this.transitionTo('contest', this.get('contest.id'));
+      this.transitionTo('contests');
     },
     cancel() {
       this.transitionTo('contests');

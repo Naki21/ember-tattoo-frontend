@@ -3,9 +3,9 @@
       <div class="caption">
         <h3>{{submission.title}}</h3>
 
-        <div>{{star-rating item=submission rating=submission.rating on-click="updateRating" fullClassNames='glyphicon glyphicon-star' emptyClassNames='glyphicon glyphicon-star-empty'}}
-        </div>
-        {{#if isArtist}}<button type="button" class="btn btn-danger" {{action
+        {{#if isClient}}<div>{{star-rating item=submission rating=submission.rating on-click="updateRating" fullClassNames='glyphicon glyphicon-star' emptyClassNames='glyphicon glyphicon-star-empty'}}
+        </div>{{/if}}
+        {{#if submission.editable}}<button type="button" class="btn btn-danger" {{action
          'delete'}}>Delete</button>{{/if}}
          </div>
     </div>

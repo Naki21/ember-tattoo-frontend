@@ -8,5 +8,4 @@ export default DS.Model.extend({
   submissions: DS.hasMany('submission', {async: true}),
   // editable: DS.attr('boolean'),
   user: DS.belongsTo('user'),
-  contest: DS.belongsTo('contest')
 });
