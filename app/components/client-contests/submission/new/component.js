@@ -2,7 +2,6 @@ import Ember from 'ember';
 
 export default Ember.Component.extend({
   auth: Ember.inject.service(),
-
   isArtist: Ember.computed.alias('auth.isArtist'),
   submission: {
     title: null,
@@ -21,6 +20,7 @@ export default Ember.Component.extend({
       this.sendAction('save', submission);
     },
     cancel() {
+      console.log('cancel component sub');
       this.sendAction('cancel', this.get('submission'));
     }
   }

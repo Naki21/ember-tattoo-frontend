@@ -7,6 +7,10 @@ export default Ember.Route.extend({
   actions: {
     saveSubmission(submission) {
       this.get('store').createRecord('submission', submission).save();
+    },
+    cancel(submission) {
+      this.transitionTo('contests');
+      console.log('cancel route');
     }
   }
 });
