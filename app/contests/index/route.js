@@ -12,6 +12,7 @@ export default Ember.Route.extend({
       console.log('inside contests route');
       console.log(contest.id);
       this.transitionTo('contest.edit', contest.id);
-    }
+    },
+
   }
 });

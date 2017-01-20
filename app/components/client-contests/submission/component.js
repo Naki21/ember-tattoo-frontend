@@ -1,6 +1,10 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
+  auth: Ember.inject.service(),
+
+  isArtist: Ember.computed.alias('auth.isArtist'),
+
   tagName: 'div',
   classNames: ['col-sm-6 col-md-4'],
   actions: {
@@ -8,6 +12,10 @@ export default Ember.Component.extend({
      const { item: submission, rating } = params;
      submission.set('rating', rating);
      return submission.save();
+  },
+  delete(){
+    console.log('here in delete');
+    this.sendAction('delete', this.get('submission'));
   }
 }
 });

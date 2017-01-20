@@ -4,7 +4,7 @@
 <div class="container">
 <row>
 {{#each model.submissions as |submission|}}
-  {{client-contests/submission submission=submission}}
+  {{client-contests/submission submission=submission delete='delete'}}
 {{/each}}
 </row>
 </div>

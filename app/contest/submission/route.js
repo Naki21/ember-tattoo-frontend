@@ -13,10 +13,11 @@ export default Ember.Route.extend({
       if (extensionString === jpg) {} else if (extensionString === png) {} else if (extensionString === gif) {} else {
         this.get('flashMessages').warning("It appears that the URL you've tried to upload to the database is not an image URL or the URL uses an extension that is not accepted by this application. All URLs entered into the field MUST end with '.jpg', '.png', or '.gif' and must not have any character after the file extension.");
         return;
-      };
+      }
       this.get('store').createRecord('submission', submission).save();
+      this.transitionTo('contest', this.get('contest.id'));
     },
-    cancel(submission) {
+    cancel() {
       this.transitionTo('contests');
       console.log('cancel route');
     }

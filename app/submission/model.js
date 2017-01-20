@@ -6,4 +6,5 @@ export default DS.Model.extend({
   description: DS.attr('string'),
   rating: DS.attr('number'),
   contest: DS.belongsTo('contest'),
+  submission: DS.belongsTo('submission'),
 });

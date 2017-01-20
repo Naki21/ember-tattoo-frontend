@@ -5,7 +5,8 @@
 
         <div>{{star-rating item=submission rating=submission.rating on-click="updateRating" fullClassNames='glyphicon glyphicon-star' emptyClassNames='glyphicon glyphicon-star-empty'}}
         </div>
-        <p><a class="btn btn-primary disabled" role="button">Comment</a> <a class="btn btn-default disabled" role="button">Reject</a></p>
-      </div>
+        {{#if isArtist}}<button type="button" class="btn btn-danger" {{action
+         'delete'}}>Delete</button>{{/if}}
+         </div>
     </div>
     {{outlet}}
