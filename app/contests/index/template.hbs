@@ -1,4 +1,4 @@
-{{#link-to 'contests.new'}}New Contest{{/link-to}}
+{{#if isClient}}{{#link-to 'contests.new'}}New Contest{{/link-to}}{{/if}}
 <hr>
 {{#each model as |contest|}}
 {{client-contests contest=contest editContest="editContest"}}
