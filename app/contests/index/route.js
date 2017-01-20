@@ -2,7 +2,6 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
   auth: Ember.inject.service(),
-
   isClient: Ember.computed.alias('auth.isClient'),
 
   model() {

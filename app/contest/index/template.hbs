@@ -1,9 +1,6 @@
 {{outlet}}
 {{client-contests/info contest=model editContest='editContest'}}
-{{#if isArtist}}
-{{#link-to 'contest.submission' model}}New Submission{{/link-to}}
-{{/if}}
-
+{{client-contests/submission/new}}
 <div class="container">
 <row>
 {{#each model.submissions as |submission|}}

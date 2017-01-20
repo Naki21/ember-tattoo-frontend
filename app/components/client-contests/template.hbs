@@ -5,10 +5,10 @@
 </div>
 <div class="media-body">
   <h4 class="media-heading">{{contest.name}}</h4>
-<p>{{contest.prize}}</p>
+<p>${{contest.prize}}</p>
   <p>{{contest.end_date}}</p>
 </div>
-<button class="btn btn-warning btn-xs"type="button" name="editButton" {{action 'edit'}}>Edit</button>
+{{#if isClient}}<button class="btn btn-warning btn-xs"type="button" name="editButton" {{action 'edit'}}>Edit</button>{{/if}}
 
 
 {{outlet}}

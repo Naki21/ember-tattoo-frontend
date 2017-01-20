@@ -1,9 +1,8 @@
-{{#if isClient}}{{#link-to 'contests.new'}}New Contest{{/link-to}}{{/if}}
 <hr>
 {{#each model as |contest|}}
 {{client-contests contest=contest editContest="editContest"}}
 <hr>
 {{else}}
 
-<p>You currently have no open contests. Click new contest to get started.</p>
+<p>You currently have no open contests. Click new contest  in the navbar to  get started.</p>
 {{/each}}
