@@ -11,16 +11,16 @@ Router.map(function () {
   this.route('change-password');
   this.route('contests', function() {
     this.route('new');
+    this.route('contest', { path: "/:contest_id" },function() {
+      this.route('edit');
+      // this.route('submission', function() {
+      //   this.route('new');
+      // this.route('submissions');
+      // }
+      // );
+    });
   });
-  this.route('contest', { path: "contest/:contest_id" },function() {
-    this.route('edit');
-    // this.route('submission', function() {
-    //   this.route('new');
-    // this.route('submissions');
-    // }
-  // );
-  });
-  this.route('contest.submission', { path: "contest/:contest_id/submission" });
+  // this.route('contest.submission', { path: "contest/:contest_id/submission" });
 });
 
 export default Router;
