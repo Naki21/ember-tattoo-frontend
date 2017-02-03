@@ -11,7 +11,7 @@ export default Ember.Route.extend({
     },
     cancelContest(contest) {
       contest.rollbackAttributes();
-      this.transitionTo('contest', contest.id);
+      this.transitionTo('contests.contest', contest.id);
       console.log('cancel route');
     }
   }
