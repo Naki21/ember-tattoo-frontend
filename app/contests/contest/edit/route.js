@@ -7,7 +7,7 @@ export default Ember.Route.extend({
       console.log(this.get('contest.prize'));
       console.log('here');
       contest.save();
-      this.transitionTo('contest', contest.id);
+      this.transitionTo('contests.contest', contest.id);
     },
     cancelContest(contest) {
       contest.rollbackAttributes();

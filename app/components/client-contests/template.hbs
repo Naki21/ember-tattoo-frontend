@@ -1,3 +1,5 @@
+<div class="row">
+  <div class="col-sm-6">
 <div class="media-left">
   {{#link-to 'contests.contest' contest.id}}
     <img class="media-object" src="http://placehold.it/64x64" alt="...">
@@ -9,6 +11,10 @@
   <p>{{contest.end_date}}</p>
 </div>
 {{#if isClient}}<button class="btn btn-warning btn-xs" type="button" name="editButton" {{action 'edit'}}>Edit</button>{{/if}}
-
+</div>
+<div class="col-sm-6">
+<p>  {{contest.description}}</p>
+</div>
+</div>
 
 {{outlet}}

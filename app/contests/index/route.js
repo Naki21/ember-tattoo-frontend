@@ -11,7 +11,7 @@ export default Ember.Route.extend({
     editContest(contest) {
       console.log('inside contests route');
       console.log(contest.id);
-      this.transitionTo('contest.edit', contest.id);
+      this.transitionTo('contests.contest.edit', contest.id);
     },
 
   }
