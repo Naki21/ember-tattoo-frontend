@@ -1,0 +1,7 @@
+<hr>
+{{#each model as |contest|}}
+{{client-contests contest=contest editContest="editContest"}}
+<hr>
+{{else}}
+<p>You currently have no open contests. Click new contest  in the navbar to  get started.</p>
+{{/each}}

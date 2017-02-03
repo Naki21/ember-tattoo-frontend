@@ -8,10 +8,10 @@ export default Ember.Component.extend({
   tagName: 'div',
   classNames: ['container-fluid well'],
 
-actions: {
-    edit(){
+  actions: {
+    edit() {
       console.log('in the client contests');
       this.sendAction('editContest', this.get('contest'));
+    }
   }
-}
 });
