@@ -1,9 +1,18 @@
-{{client-contests/info contest=model editContest='editContest'}}
+<div class="card">
+  <div class="container-fliud">
+    <div class="wrapper row">
+      {{#client-contests/contest-info}}
+        {{client-contests/contest-info/image-carousel}} {{client-contests/contest-info/contest-description contest=model editContest='editContest'}} {{client-contests/submission-button}}
+      {{/client-contests/contest-info}}
+    </div>
+  </div>
+</div>
+
 {{submission-button contest=model}}
 <div class="container">
-<row>
-{{#each model.submissions as |submission|}}
-  {{client-contests/submission submission=submission delete='delete'}}
-{{/each}}
-</row>
+  <row>
+    {{#each model.submissions as |submission|}}
+      {{client-contests/submission submission=submission delete='delete'}}
+    {{/each}}
+  </row>
 </div>
