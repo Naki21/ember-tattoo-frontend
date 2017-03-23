@@ -1,1 +1,8 @@
-{{#link-to 'contests.contest.submission' contest}}New Submission{{/link-to}}
+<div class="action">
+  {{#link-to 'contests.contest.submission' contest}}
+  <button class="new-submission btn btn-default" type="button">New Submission</button>
+  {{/link-to}}
+  {{#link-to 'contests'}}
+  <button class="new-submission btn btn-default" type="button">back to contests</button>
+  {{/link-to}}
+</div>

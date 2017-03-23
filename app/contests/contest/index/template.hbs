@@ -1,12 +1,8 @@
-<div class="card">
-  <div class="container-fliud">
-    <div class="wrapper row">
-      {{#client-contests/contest-info}}
-        {{client-contests/contest-info/image-carousel}} {{client-contests/contest-info/contest-description contest=model editContest='editContest'}} {{client-contests/submission-button}}
-      {{/client-contests/contest-info}}
-    </div>
-  </div>
-</div>
+{{#client-contests/contest-info}}
+  {{client-contests/contest-info/image-carousel}}
+  {{client-contests/contest-info/contest-description contest=model editContest='editContest'}}
+  {{client-contests/submission-button}}
+{{/client-contests/contest-info}}
 
 {{submission-button contest=model}}
 <div class="container">
